@@ -49,6 +49,7 @@ This project demonstrates a basic TCP/IP echo server-client application with a 1
 - After sending the message, it will display the time of sending.
 - The server will process the request with a 10-second delay and send back a modified response.
 - The client will display the received message, the time of receiving, and the time interval between sending and receiving.
+- The server will print the message received from each client and the client's address.
 
 
 ---
