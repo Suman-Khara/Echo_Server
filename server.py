@@ -9,8 +9,10 @@ def handle_client(client_socket, address):
         if not data:
             print(f"Connection from {address} closed")
             break
-        time.sleep(10)  # Introduce a delay of 10 seconds
-        modified_data = data.decode('ascii') + ' (processed)'
+        message = data.decode('ascii')
+        print(f"Received from {address}: {message}")
+        time.sleep(10)  # Introduce a 10-second delay
+        modified_data = message + ' (processed)'
         client_socket.send(modified_data.encode('ascii'))
     client_socket.close()
 
